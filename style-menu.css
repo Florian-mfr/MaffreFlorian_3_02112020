@@ -11,22 +11,19 @@ a {
 
 nav {
   display: flex;
-  align-items: center;
+  justify-content: center;
   padding: 15px 0 10px 0;
   width: 100%;
   background-color: #ffffff;
 }
 nav .header_retour {
-  margin-left: 15px;
-  display: flex;
-  justify-content: start;
+  position: absolute;
   font-size: 18px;
+  top: 15px;
+  left: 15px;
 }
 nav .header_logo {
-  display: flex;
-  justify-content: center;
   width: 150px;
-  /*margin-left: 15%;*/
 }
 
 .img_ALaFrancaise {
@@ -114,11 +111,21 @@ nav .header_logo {
 .container_box .box_info h4 {
   margin: 10px 0 5px 0;
   font-weight: bold;
+  width: auto;
+  height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .container_box .box_info p {
   margin: 5px 0 10px 0;
   font-size: 14px;
   font-weight: lighter;
+  width: auto;
+  height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .container_box .box_right {
   display: flex;
@@ -140,10 +147,14 @@ nav .header_logo {
 .container_box .box_hover .hover_i {
   display: flex;
   margin: 40%;
+  transition: transform 1s;
+}
+.container_box .box_hover .hover_i:hover {
+  transform: rotate(360deg);
 }
 
 .container_box:hover .box_hover {
-  display: inline-block;
+  display: block;
 }
 
 .btn {
@@ -157,6 +168,7 @@ nav .header_logo {
   margin: 0 auto;
   font-weight: 400;
   font-size: 17px;
+  cursor: pointer;
   margin-top: 30px;
 }
 
