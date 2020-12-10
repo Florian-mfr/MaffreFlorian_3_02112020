@@ -3,6 +3,8 @@ body {
   margin: 0;
   font-size: 18px;
   font-family: "Roboto", sans-serif;
+  max-width: 800px;
+  margin: auto;
 }
 
 a {
@@ -47,7 +49,7 @@ a {
 .header_exploration .btn {
   text-align: center;
   justify-content: center;
-  background-color: #9356DC;
+  background: linear-gradient(0.45turn, #FF79DA, #9356DC);
   width: 240px;
   color: #ffffff;
   padding: 15px 0;
@@ -145,6 +147,10 @@ a {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
+.restaurants_container .restaurants_img .img_nouveau {
+  background-color: #99E2D0;
+  padding: 4px 6px;
+}
 .restaurants_container .container_info {
   display: flex;
   align-items: center;
@@ -156,12 +162,19 @@ a {
 .restaurants_container .container_info_text h3, .restaurants_container .container_info_text p {
   margin: 0;
 }
-.restaurants_container .container_i {
-  margin-right: 15px;
-  font-size: 22px;
+.restaurants_container .i_empty {
+  font-size: 25px;
+  margin-right: -29px;
 }
-.restaurants_container .container_i_full {
-  display: none;
+.restaurants_container .i_full {
+  margin-right: 15px;
+  font-size: 25px;
+  color: transparent;
+  transition: color 0.3s;
+}
+
+.i_full:hover {
+  color: #9356DC;
 }
 
 footer {
@@ -169,6 +182,9 @@ footer {
   flex-direction: column;
   padding: 20px 0;
   background-color: #353535;
+}
+footer .a_underline:hover {
+  text-decoration: underline;
 }
 footer .footer_text {
   display: flex;
