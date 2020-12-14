@@ -1,0 +1,224 @@
+@import "variable.scss";
+@import "mixins.scss";
+
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    max-width: 800px;
+    margin: auto;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0 10px 0;
+    width: 100%;
+    background-color: #ffffff;
+    position: relative;
+    
+    .header_retour {
+        position: absolute;
+        font-size: 18px;
+        top: 15px;
+        left: 15px;
+    }
+    .header_logo {
+        width: 150px;
+    }
+}
+.img_ALaFrancaise {
+    background-image: url(images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.img_LaPaletteDuGout {
+    background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.img_LaNoteEnchantee {
+    background-image: url(images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.img_LeDeliceDesSens {
+    background-image: url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.header_img {
+    height: 300px;
+    width: 100%; 
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: $grey;
+    padding-bottom: 80px;
+    margin-top: -30px;
+}
+.menu_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    .nom_restaurant {
+        font-family: 'Shrikhand', cursive;
+        font-size: 24px;
+        font-weight: lighter;
+        margin-left: 20px;
+    }
+    .i_empty {
+        font-size: 25px;
+        margin-right: -29px;
+    }
+    .i_full {
+        margin-right: 15px;
+        font-size: 25px; 
+        color: transparent;
+        transition: color 0.3s; 
+    }
+}
+.i_full:hover {
+    color: $primary;
+}
+.menu_container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    animation: slidedown 1s;
+    h3 {
+        margin-left: 20px;
+        font-weight: lighter;
+        border-bottom: 3px solid $tertiary;
+        padding-bottom: 5px;
+        width: 40px;
+    }
+}
+.container_box {
+    display: flex;
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    padding: 0;
+    margin: 10px auto;
+    border-radius: 20px;
+    box-shadow: 2px 3px 5px #c9caccd2;
+    .box_info {
+        margin-left: 10px;
+        width: calc(100% - 60px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        
+        h4 {
+            margin: 10px 0 5px 0;
+            font-weight: bold;
+            width: 100%;
+            height: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        p {
+            margin: 5px 0 10px 0;
+            font-size: 14px;
+            font-weight: lighter;
+            width: 100%;
+            height: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+    .box_right {
+        display: flex;
+        align-items: center;
+    }
+    .box_price {
+        font-weight: bold;
+        margin-right: 10px;
+    }
+    .box_hover {
+        background-color: $tertiary;
+        height: 100%;
+        width: 0px;
+        padding: 1px 0;
+        color: #ffffff;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        transition: width 0.4s;
+       .hover_i {
+           display: flex;
+           width: 0px;
+           overflow: hidden;
+           margin: 40%;
+           transition: transform 0.5s;
+       }
+    }
+    
+}
+.container_box:hover {
+    .box_hover {
+        width: 60px;
+    }
+    .hover_i {
+        transform: rotate(360deg);
+        width: 5px;
+        overflow: visible;
+    }
+}
+.btn {
+    @include button;
+    margin-top: 30px;
+    transition: transform 0.5s;
+}
+.btn:hover {
+    transform: scale(1.1);
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    background-color: #353535;
+
+    .a_underline:hover {
+        text-decoration: underline;
+    }
+    .footer_text {
+        display: flex;
+        margin: 5px 20px;
+        align-items: center;
+        color: #ffffff;
+        p {
+            margin: 0;
+        }
+    }
+    .footer_logo {
+        color: #ffffff;
+        font-family: 'Shrikhand', cursive;
+        font-size: 26px;
+        margin: 10px 0;
+    }
+    .footer_i {
+        margin-right: 10px;
+        color: #ffffff;
+    }
+}
+@keyframes slidedown {
+    from {
+        transform: translateY(-500px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

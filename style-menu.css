@@ -65,6 +65,7 @@ nav .header_logo {
   border-top-right-radius: 30px;
   background-color: #f6f6f6;
   padding-bottom: 80px;
+  margin-top: -30px;
 }
 
 .menu_head {
@@ -168,7 +169,6 @@ nav .header_logo {
   overflow: hidden;
   margin: 40%;
   transition: transform 0.5s;
-  transition: width 0.1s;
 }
 
 .container_box:hover .box_hover {

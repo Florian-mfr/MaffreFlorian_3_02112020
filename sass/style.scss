@@ -1,0 +1,195 @@
+@import "variable.scss";
+@import "mixins";
+
+body {
+    background-color: #ffffff;
+    margin: 0;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    max-width: 800px;
+    margin: auto;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.header_logo {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0 10px 0;
+}
+.header_search {
+    display: flex;
+    justify-content: center;
+    background-color: #eaeaea;
+    padding: 10px 0;
+    border-top: 2px solid #cecece;
+}
+.search_MapMarker {
+    padding: 0 10px 0 0;
+}
+.header_exploration {
+    background-color: $grey;
+    padding: 20px 25px 50px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .exploration_h2 {
+        text-align: center;
+        margin: 5px;
+    }
+    .exploration_p {
+        text-align: center;
+        margin: 5px 0 30px 0;
+        font-weight: lighter;
+    }
+    .btn {
+        @include button;
+        transition: transform 0.5s;
+    }
+    .btn:hover {
+        transform: scale(1.1);
+    }
+}
+.fonctionnement {
+    margin: 20px 0;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.fonctionnement_h2 {
+    margin-left: 20px;
+    margin-top: 30px;
+}
+.fonctionnement_box
+{
+    display: flex;
+    background-color: $grey;
+    align-items: center;
+    width: 90%;
+    padding: 10px 0;
+    margin: 10px auto;
+    border-radius: 25px;
+    box-shadow: 2px 3px 5px #c9caccd2;
+
+    .fonctionnement_number {
+        background-color: $primary;
+        border-radius: 100%;
+        padding: 2px 7px;
+        color: #ffffff;
+        margin: auto 10px auto -10px;
+    }
+    .fonctionnement_i {
+        margin: 0 10px;
+    }
+    .fonctionnement_p {
+        margin: 15px auto;
+        padding-right: 20px;
+        text-align: center;
+    }
+}
+.restaurants {
+    background-color: $grey;
+    padding: 30px 0;
+}
+.restaurants_h2 {
+    margin-left: 20px;
+}
+.img_LaPaletteDuGout {
+    background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.img_LaNoteEnchantee {
+    background-image: url(images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.img_ALaFrancaise {
+    background-image: url(images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.img_LeDeliceDesSens {
+    background-image: url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.restaurants_container {
+    height: 250px;
+    width: auto;
+    margin: 15px 20px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: 2px 3px 5px #c9caccd2;
+    .restaurants_img {
+        width: 100%;
+        height: 195px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        position: relative;
+        .img_nouveau {
+            background-color: $tertiary;
+            padding: 4px 6px;  
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            border-radius: 5px;
+        }
+    }
+    .container_info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .container_info_text {
+        margin: 10px 0 10px 15px;
+        h3, p {
+            margin: 0;
+        }
+    }
+    .i_empty {
+        font-size: 25px;
+        margin-right: -29px;
+    }
+    .i_full {
+        margin-right: 15px;
+        font-size: 25px; 
+        color: transparent;
+        transition: color 0.3s; 
+    }
+}
+.i_full:hover {
+    color: $primary;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    background-color: #353535;
+    .a_underline:hover {
+        text-decoration: underline;
+    }
+    .footer_text {
+        display: flex;
+        margin: 5px 20px;
+        align-items: center;
+        color: #ffffff;
+        p {
+            margin: 0;
+        }
+    }
+    .footer_logo {
+        color: #ffffff;
+        font-family: 'Shrikhand', cursive;
+        font-size: 26px;
+        margin: 10px 0;
+    }
+    .footer_i {
+        margin-right: 10px;
+        color: #ffffff;
+    }
+}

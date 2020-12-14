@@ -1,0 +1,13 @@
+@mixin button {
+    text-align: center;
+    justify-content: center;
+    background: linear-gradient(0.45turn, $secondary, $primary);
+    width: 240px;
+    color: #ffffff;
+    padding: 15px 0;
+    border-radius: 30px;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 17px;
+    cursor: pointer;
+}
