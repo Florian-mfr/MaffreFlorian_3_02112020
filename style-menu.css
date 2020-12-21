@@ -98,7 +98,6 @@ nav .header_logo {
   display: flex;
   flex-direction: column;
   margin: 10px 0;
-  animation: slidedown 1s;
 }
 .menu_container h3 {
   margin-left: 20px;
@@ -107,8 +106,39 @@ nav .header_logo {
   padding-bottom: 5px;
   width: 40px;
 }
+.menu_container .anim1 {
+  animation-duration: 0.3s;
+}
+.menu_container .anim2 {
+  animation-duration: 0.6s;
+}
+.menu_container .anim3 {
+  animation-duration: 0.9s;
+}
+.menu_container .anim4 {
+  animation-duration: 1.2s;
+}
+.menu_container .anim5 {
+  animation-duration: 1.5s;
+}
+.menu_container .anim6 {
+  animation-duration: 1.8s;
+}
+.menu_container .anim7 {
+  animation-duration: 2.1s;
+}
+.menu_container .anim8 {
+  animation-duration: 2.4s;
+}
+.menu_container .anim9 {
+  animation-duration: 2.7s;
+}
+.menu_container .anim10 {
+  animation-duration: 3s;
+}
 
 .container_box {
+  animation: slidedown;
   display: flex;
   background-color: #ffffff;
   align-items: center;
@@ -231,7 +261,7 @@ footer .footer_i {
 
 @keyframes slidedown {
   from {
-    transform: translateY(-500px);
+    transform: translateY(-100px);
     opacity: 0;
   }
   to {
