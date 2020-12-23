@@ -1,6 +1,56 @@
 @import "variable.scss";
 @import "mixins";
 
+.loader-wrapper {
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    background-color: $grey;
+    animation: hide 2s linear;
+    visibility: hidden;
+    p {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        color: $primary;
+        margin-top: 40px;
+        margin-left: -40px;
+    }
+}
+@keyframes hide {
+    from {
+        visibility: visible;
+    }
+    to {
+        visibility: hidden;
+    }
+}
+.loader:after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -20px;
+    border-radius: 50%;
+    border: 6px solid transparent;
+    border-top-color: $primary;
+    border-bottom-color: $secondary;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 body {
     background-color: #ffffff;
     margin: 0;
@@ -8,6 +58,18 @@ body {
     font-family: 'Roboto', sans-serif;
     max-width: 800px;
     margin: auto;
+    animation: visible 2s linear;
+}
+@keyframes visible {
+    from {
+        visibility: hidden;
+        overflow: hidden;
+       
+    }
+    to {
+        visibility: visible;
+        overflow: visible;
+    }
 }
 a {
     text-decoration: none;
