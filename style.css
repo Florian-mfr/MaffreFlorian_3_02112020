@@ -57,19 +57,8 @@ body {
   font-family: "Roboto", sans-serif;
   max-width: 800px;
   margin: auto;
-  animation: visible 2s linear;
 }
 
-@keyframes visible {
-  from {
-    visibility: hidden;
-    overflow: hidden;
-  }
-  to {
-    visibility: visible;
-    overflow: visible;
-  }
-}
 a {
   text-decoration: none;
   color: black;
